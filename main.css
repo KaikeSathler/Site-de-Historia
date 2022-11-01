@@ -1,0 +1,541 @@
+﻿/* Resetar a configuração padrão do body */
+
+html, body {
+    margin: 0;
+    background-color: #fff7e7;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+/* Importando fonte personalizada */
+
+@font-face {
+    font-family: "fontetitulo";
+    src: url("./fonts/Roman\ SD.ttf");
+}
+
+/* Retirando as origens padrão dos elementos */
+
+ul, li, a {
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: #0d0d0d;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Resetando as margens dos titulos */
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-family: 'fontetitulo';
+}
+
+/* Estilizando a imagem da barra de topo (topbar) */
+
+.topbar img {
+    width: 150px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0 auto;
+    transform: translateY(-16%);
+    pointer-events: none;
+    z-index: 999;
+}
+
+/* Estilizando a barra de navegação (navbar) */
+
+nav.navbar {
+    background-color: #F0CD89;
+    padding: 2%;
+    z-index: 2;
+}
+
+
+/* Itens da navbar */
+
+.navbar-itens {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+/* Alterar o tamanho da fonte da navbar*/
+
+.navbar-itens a {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: 'fontetitulo';
+    font-weight: bold;
+}
+
+/* Separar os elementos da navbar */
+
+.container-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Alinhar o item da navbar "tópicos"  para esquerda */
+
+.nav-link-topicos {
+    display: flex;
+    padding-right: 25rem;
+}
+
+/* Esconder botão de abrir a navbar no celular quando não for responsivo */
+
+#navbar-botao {
+    display: none;
+}
+
+/* Criação do dropdown */
+
+.dropdown-menu {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 9999;
+    background: #F0CD89;
+    width: 18%;     
+    gap: 0.5rem;
+    border-radius: 0.500em;
+    max-height: 0;
+    transition: all 500ms ease-in-out;
+    /* Adicionando sombras */
+    -webkit-box-shadow: 0px 0px 22px -9px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 22px -9px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 22px -9px rgba(0,0,0,0.75);
+    margin-top: 10px;
+}
+
+.dropdown-menu > li > a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    opacity: 0;
+    transition: all 600ms ease;
+}
+.dropdown:hover > .dropdown-menu > li > a {
+    opacity: 1;
+}
+
+.dropdown:hover > .dropdown-menu {
+    visibility: visible;
+    max-height: 500px;
+}
+
+.dropdown-menu > li, .submenu-menu > li {
+    padding: 1rem;
+    border-radius: 0.500em;
+
+}
+
+.dropdown-menu > li:hover {
+    background-color: #dab56b;
+    cursor: pointer;
+}
+
+/* Submenu */
+
+.submenu-menu {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 9999;
+    background: #F0CD89;
+    width: 100%;
+    gap: 0.5rem;
+    border-radius: 0.500em;
+    overflow: hidden;
+    max-height: 0;
+    transition: all 500ms ease-in-out;
+    /* Adicionando sombras */
+    -webkit-box-shadow: 0px 0px 22px -9px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 22px -9px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 22px -9px rgba(0,0,0,0.75);
+    transform: translateY(-2.3rem);
+    left: 100%;
+}
+
+.submenu-menu > li > a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.submenu:hover > .submenu-menu {
+    visibility: visible;
+    max-height: 500px;
+}
+
+.submenu-menu > li, .submenu-menu > li {
+    padding: 1rem;
+    border-radius: 0.500em;
+
+}
+
+.submenu-menu > li:hover {
+    background-color: #dab56b;
+    cursor: pointer;
+}
+
+
+/* Quando o usuário clicar nas três barrinhas, ele irá aplicar esse estilo */
+
+.container-items.ativo {
+    display: block;
+    margin-top: 10%;
+}
+
+/* Espaçamento do conteúdo principal para não ficar colado a navbar */
+
+main {
+    margin-top: 0.5%;
+}
+
+/* Carrousel */
+
+.slider {
+    overflow: hidden;
+    width: 90%;
+    margin: auto;
+}
+
+/* A parte do carrousel inteira */
+
+.slider-container {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite;
+}
+
+/* Faz a imagem dentro do carrosel flutuar para a esquerda*/
+
+.slider .slider-container img {
+    width: 20%;
+    float: left;
+}
+
+/* Animção do Carrosel */
+
+@keyframes slider {
+    0% { left: 0; }
+    20% { left: 0; }
+    25% { left: -100%; }
+    45% { left: -100%; }
+    50% { left: -200% }
+    70% { left: -200%; }
+    75% { left: -300%; }
+    90% { left: -300%; }
+    100% { left: -400%; }
+}
+
+
+/* Cards */
+
+.cards {
+    /* Mostrar o elemento sempre na frente */
+    z-index: 3;
+    /* Alinhamento */
+    display: flex;
+    margin: auto;
+    width: 87%;
+    position: relative;
+    bottom: 5rem;
+    background: #fff;
+    border: #fad893 3px solid;
+}
+
+/*Elementos que fica dentro do card*/
+
+.card {
+    /* Alinhamento e ajustamento */
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0;
+    overflow: hidden;
+    /* Customização */
+    height: fit-content;
+    padding: 12px;
+    margin: auto;
+}
+
+/* Ajustando a fonte e a margem da lista */
+
+.card ul {
+    margin: 20px 0;
+    list-style-type: disc;
+}
+
+.card ul li {
+    font-size: 19px;
+    margin-left: 1.2rem;
+    font-family: 'Times New Roman', serif;
+    
+}
+
+.cards span {
+    font-size:large;
+}
+
+/* Subtitulo do card */
+
+#subtitulo {
+    padding-bottom: 9px;
+}
+
+/* Quadrados que ficam no card */
+
+#flecha1 {
+    color: #67B486;
+}
+
+#flecha2 {
+    color: #4890B8;
+}
+
+#flecha3 {
+    color: #B95553;
+}
+
+#flecha1, #flecha2, #flecha3 {
+    padding-right: 8px;
+}
+
+/* Borda na esquerda dos elementos, com exceção do primeiro */
+
+.card:not(:first-child) {
+    border-left: 3px solid #F0CD89;
+}
+
+/* Customizando a imagem dentro do card */
+
+.card img {
+    width: 100%;
+    height: fit-content;
+    transition: transform 500ms ease;
+}
+
+/* Quando voce passa o mouse em cima do card, ele aplica uma animção */
+
+.card img:hover {
+    transform: scale(1.050);
+}
+
+/* Botão "Saiba Mais" do Card */
+
+.card button {
+    background: none;
+    outline: none;
+    border: none;
+    width: 40%;
+    height: 4%;
+    margin: auto;
+    padding: 12px;
+    border-radius: 0.200em;
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    -webkit-box-shadow: 0px 0px 22px -9px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 22px -9px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 22px -9px rgba(0,0,0,0.75);    
+    transition: all 250ms ease-in-out;
+}
+
+/* Mostrando o cursor ponteiro quando passar o mouse em cima do botão do card */
+
+.card button:hover {
+    cursor: pointer;
+}
+
+/* Alterando as cores dos botões do card */
+
+.card:nth-child(1) button {
+    background-color: #67B486;
+}
+
+.card:nth-child(2) button {
+    background-color: #4890B8;
+}
+
+.card:nth-child(3) button {
+    background-color: #B95553;
+}
+
+/* Quando passar o mouse em cima de um dos 3 botões, ele irá aplicar uma animação */
+
+
+.card:nth-child(1) button:hover, .card:nth-child(2) button:hover, .card:nth-child(3) button:hover {
+    filter: brightness(1.1);
+    transform: scale(1.05);
+    color: #fff;
+}
+
+
+/* Conteúdo principal */
+
+.conteudo_principal {
+    display: block;
+    margin: auto;
+    width: 60%;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    -webkit-box-shadow: -2px 3px 21px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: -2px 3px 21px 2px rgba(0,0,0,0.75);
+    box-shadow: -2px 3px 21px 2px rgba(0,0,0,0.75);
+}
+
+/* Título do Conteúdo principal */
+
+.conteudo_principal > h1 {
+    text-align: center;
+}
+
+/*Caixa do Conteúdo principal*/
+
+.conteudo {
+    display: grid;
+    /* Auto ajustar em coluna ou linha */
+    grid-template-columns: repeat(auto-fill, minmax(100px, 250px));
+    grid-gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+/* Texto */
+
+.conteudo p {
+    font-size: 24px;
+    text-align: justify;
+}
+
+
+/* Footer */
+
+footer {
+    margin-top: 5%;
+    padding: 20px;
+    background-color: #F0CD89;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* 
+
+            _____                                 _       _     _           _      
+            |  __ \                              (_)     (_)   | |         | |     
+            | |__) |___ ___ _ __   ___  _ __  ___ ___   ___  __| | __ _  __| | ___ 
+            |  _  // _ / __| '_ \ / _ \| '_ \/ __| \ \ / | |/ _` |/ _` |/ _` |/ _ \
+            | | \ |  __\__ | |_) | (_) | | | \__ | |\ V /| | (_| | (_| | (_| |  __/
+            |_|  \_\___|___| .__/ \___/|_| |_|___|_| \_/ |_|\__,_|\__,_|\__,_|\___|
+                            | |                                                     
+                            |_|       
+                                                                                            
+                 
+ */
+
+
+/* Deixar o site acessivel para todas as dimensões para Celular*/
+
+@media only screen and (max-width: 480px) {
+    .topbar img {
+        width: 90px;
+        right: 100%;
+        transform: translateY(-0.7rem);
+    }
+    
+    div.slider {
+        margin-top: 5%;
+    }
+}
+
+/* Deixar o site acessível para todas as dimensões, exemplo: Celular, Tablet, etc...*/
+
+@media only screen and (max-width: 1000px) {
+    .container-items {
+        display: none;
+    }
+
+    #navbar-botao {
+        display: block;
+        margin-left: auto;
+    }
+
+    .navbar-itens {
+        display: block;
+        width: 100%;
+        padding: 0 !important;
+    }
+
+    .nav-link {
+        margin-top: 25px;
+    }
+}
+
+/* Deixando o card responsivo */
+
+@media only screen and (max-width: 1100px) {
+    .cards {
+        display: block;
+        top: 2rem;
+        width: 70%;
+        padding: 2rem;
+        margin-bottom: 4rem;
+        background: none;
+        border: none;
+    }
+    .card img {
+        width: 80%;
+        height: fit-content;
+        margin: auto;
+    }
+    .card {
+        height: fit-content;
+        width: 80%;
+        padding: 1.2rem;
+        border: 3px solid #F0CD89;
+        border-radius: 16px;
+        background: #fff;
+    }
+    .card:not(:first-child) {
+        margin-top: 1rem;
+    }
+    .card ul {
+        padding: 16px;
+    }
+}
+
+/* Conteúdo principal */
+
+@media only screen and (max-width: 460px) {
+    .conteudo_principal > h1 {
+        font-size: 18px;
+    }
+    .conteudo img {
+        width: 100%;
+    }
+}
+
+
+/* Deixando o dropdown responsível */
+
+@media only screen and (max-width: 460px) {  
+    .dropdown-menu, .submenu-menu {
+        width: 200px;
+    }
+}
