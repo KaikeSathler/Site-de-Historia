@@ -8,7 +8,6 @@ html, body {
     min-height: 100vh;
 }
 
-
 /* Importando fonte personalizada */
 
 @font-face {
@@ -56,7 +55,6 @@ nav.navbar {
     z-index: 2;
 }
 
-
 /* Itens da navbar */
 
 .navbar-itens {
@@ -101,8 +99,6 @@ nav.navbar {
     cursor: default;
 }
     
- 
-
 /* Criação do dropdown */
 
 .dropdown-menu {
@@ -196,7 +192,6 @@ nav.navbar {
     cursor: pointer;
 }
 
-
 /* Quando o usuário clicar nas três barrinhas, ele irá aplicar esse estilo */
 
 .container-items.ativo {
@@ -251,13 +246,11 @@ main {
     100% { left: -400%; }
 }
 
-
 /* Cards */
 
 .cards {
     /* Mostrar o elemento sempre na frente */
     z-index: 3;
-    /* Alinhamento */
     display: flex;
     margin: auto;
     width: 87%;
@@ -270,7 +263,6 @@ main {
 /*Elementos que fica dentro do card*/
 
 .card {
-    /* Alinhamento e ajustamento */
     display: flex;
     flex-direction: column;
     flex: 1 1 0;
@@ -292,7 +284,6 @@ main {
     font-size: 19px;
     margin-left: 1.2rem;
     font-family: 'Times New Roman', serif;
-    
 }
 
 .cards span {
@@ -311,6 +302,7 @@ main {
 
 #flecha1 {
     color: #67B486;
+
 }
 
 #flecha2 {
@@ -323,6 +315,9 @@ main {
 
 #flecha1, #flecha2, #flecha3 {
     padding-right: 8px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
 }
 
 /* Borda na esquerda dos elementos, com exceção do primeiro */
@@ -383,7 +378,6 @@ main {
 
 /* Quando passar o mouse em cima de um dos 3 botões, ele irá aplicar uma animação */
 
-
 .card:nth-child(1) button:hover, .card:nth-child(2) button:hover, .card:nth-child(3) button:hover {
     filter: brightness(1.1);
     transform: scale(1.05);
@@ -393,9 +387,6 @@ main {
     color: #fff !important;
 }
     
-
-
-
 /* Conteúdo principal */
 
 .conteudo_principal {
@@ -442,13 +433,12 @@ main {
 }
 
 /*Titulo do texto*/
-    #titulo {
-        font-size: 25px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        color: #ecc87f;
-    }
- 
+#titulo {
+    font-size: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #ecc87f;
+}
 
 /* Texto */
 
@@ -480,7 +470,6 @@ main {
     padding-bottom: 10px;
 }
 
-
 /* Footer */
 
 footer {
@@ -488,7 +477,6 @@ footer {
     background-color: #333333;
     margin-top: 5rem;
 }
-
 
 .img-footer {
     width: 100px;
@@ -536,7 +524,6 @@ footer > span {
     padding: 1rem 0;
     margin-left: 10px;
 }
-
 
 .texto-footer {
     font-size: 18px;
@@ -643,9 +630,7 @@ blockquote {
     font-weight: bold;
 }
 
-
 /* Saiba-mais */
-
 
 .material-titulo {
     text-align: center;
@@ -672,13 +657,11 @@ blockquote {
     padding: 10px;
 }
 
-
 #img-produtos img {
     display: table;
     width: 80%;
     margin: auto;
     box-shadow: 5px 3px 10px 0px rgba(0,0,0,0.47);
-    
 }
 
 #img-produtos span, #img-produtos a {
@@ -700,15 +683,11 @@ blockquote {
     background-color: #1967d2;;
     color: #fff;
     cursor: pointer;
-
 }
 
 #img-produtos a {
     color:#1967d2;
 }
-
-
-
 
 /* 
 
@@ -723,7 +702,6 @@ blockquote {
                                                                                             
                  
  */
-
 
 /* Deixar o site acessivel para todas as dimensões para Celular*/
 
@@ -779,11 +757,13 @@ blockquote {
         background: none;
         border: none;
     }
+
     .card img {
         width: 80%;
         height: fit-content;
         margin: auto;
     }
+
     .card {
         height: fit-content;
         width: 80%;
@@ -792,9 +772,11 @@ blockquote {
         border-radius: 16px;
         background: #fff;
     }
+
     .card:not(:first-child) {
         margin-top: 1rem;
     }
+
     .card ul {
         padding: 16px;
     }
@@ -806,6 +788,7 @@ blockquote {
     .conteudo_principal > h1 {
         font-size: 18px;
     }
+
     .conteudo img {
         width: 100%;
     }
@@ -843,31 +826,38 @@ blockquote {
         flex-wrap: wrap;
         align-items: center;
     }
+
     .conteudo {
         padding-left: 0!important;
         padding-right: 0!important;
         border-right: none!important;
     }
+
     .conteudo h1 {
         font-size: 100%;
     }
+
     .conteudo p {
         font-size: 100%;
     }
+
     .conteudo:first-child {
         padding-bottom: 24px;
         border-bottom: 3px solid #000;
     }
+
     .conteudo:nth-child(2) {    
         margin-top: 24px;
     }
+
     .separador {
         flex-direction: column;
     }
+
     .separador div:first-child {
         padding-bottom: 1rem;
     }
-
+    
     .separador {
         margin: 0 !important;
         padding: 30px 10px 0px 10px;
@@ -879,6 +869,7 @@ blockquote {
         padding-top: 1rem;
         padding-bottom: 1rem;
     }
+
     .imagens-footer {
         display: flex;
         justify-content: center;
@@ -905,8 +896,6 @@ blockquote {
         flex-direction: column;
         padding: 0;
     }
-        
-
 }
 
 /* Deixar responsivo as imagens das curiosidades */
