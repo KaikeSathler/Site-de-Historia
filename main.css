@@ -1,11 +1,11 @@
-﻿/* Resetar a configuração padrão do body */
+/* Resetar a configuração padrão do body */
 
 html, body {
     margin: 0;
-    background-color: #fff7e7;
+    background-color: #fffbf4;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 
@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Estilizando a barra de navegação (navbar) */
 
 nav.navbar {
-    background-color: #F0CD89;
+    background-color: #ecc87f;
     padding: 2%;
     z-index: 2;
 }
@@ -87,7 +87,7 @@ nav.navbar {
 
 .nav-link-topicos {
     display: flex;
-    padding-right: 25rem;
+    margin-right: 1000%;
 }
 
 /* Esconder botão de abrir a navbar no celular quando não for responsivo */
@@ -96,20 +96,28 @@ nav.navbar {
     display: none;
 }
 
+
+.dropdown > a {
+    cursor: default;
+}
+    
+ 
+
 /* Criação do dropdown */
 
 .dropdown-menu {
     visibility: hidden;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     position: absolute;
     z-index: 9999;
-    background: #F0CD89;
-    width: 18%;     
+    background: #ecc87f;
+    width: 15%;     
     gap: 0.5rem;
     border-radius: 0.500em;
     max-height: 0;
-    transition: all 500ms ease-in-out;
+    transition: all 300ms ease-in-out;
     /* Adicionando sombras */
     -webkit-box-shadow: 0px 0px 22px -9px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 22px -9px rgba(0,0,0,0.75);
@@ -118,10 +126,10 @@ nav.navbar {
 }
 
 .dropdown-menu > li > a {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'fontetitulo', sans-serif;
     font-size: 14px;
     opacity: 0;
-    transition: all 600ms ease;
+    transition: all 1250ms ease-in-out;
 }
 .dropdown:hover > .dropdown-menu > li > a {
     opacity: 1;
@@ -129,6 +137,7 @@ nav.navbar {
 
 .dropdown:hover > .dropdown-menu {
     visibility: visible;
+    overflow: visible;
     max-height: 500px;
 }
 
@@ -151,7 +160,7 @@ nav.navbar {
     flex-direction: column;
     position: absolute;
     z-index: 9999;
-    background: #F0CD89;
+    background: #ecc87f;
     width: 100%;
     gap: 0.5rem;
     border-radius: 0.500em;
@@ -167,7 +176,7 @@ nav.navbar {
 }
 
 .submenu-menu > li > a {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:'fontetitulo', sans-serif;
     font-size: 14px;
 }
 
@@ -176,7 +185,7 @@ nav.navbar {
     max-height: 500px;
 }
 
-.submenu-menu > li, .submenu-menu > li {
+.submenu-menu > li  {
     padding: 1rem;
     border-radius: 0.500em;
 
@@ -199,6 +208,7 @@ nav.navbar {
 
 main {
     margin-top: 0.5%;
+    margin-bottom: 0;
 }
 
 /* Carrousel */
@@ -207,6 +217,7 @@ main {
     overflow: hidden;
     width: 90%;
     margin: auto;
+    height: 30%;
 }
 
 /* A parte do carrousel inteira */
@@ -253,7 +264,7 @@ main {
     position: relative;
     bottom: 5rem;
     background: #fff;
-    border: #fad893 3px solid;
+    border: #ecc87f 3px solid;
 }
 
 /*Elementos que fica dentro do card*/
@@ -292,6 +303,8 @@ main {
 
 #subtitulo {
     padding-bottom: 9px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
 }
 
 /* Quadrados que ficam no card */
@@ -315,7 +328,7 @@ main {
 /* Borda na esquerda dos elementos, com exceção do primeiro */
 
 .card:not(:first-child) {
-    border-left: 3px solid #F0CD89;
+    border-left: 3px solid #ecc87f;
 }
 
 /* Customizando a imagem dentro do card */
@@ -342,12 +355,9 @@ main {
     height: 4%;
     margin: auto;
     padding: 12px;
-    border-radius: 0.200em;
+    border-radius: 4em;
     font-size: 15px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    -webkit-box-shadow: 0px 0px 22px -9px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 22px -9px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 22px -9px rgba(0,0,0,0.75);    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  
     transition: all 250ms ease-in-out;
 }
 
@@ -377,62 +387,327 @@ main {
 .card:nth-child(1) button:hover, .card:nth-child(2) button:hover, .card:nth-child(3) button:hover {
     filter: brightness(1.1);
     transform: scale(1.05);
-    color: #fff;
 }
+
+.card>button>a:hover {
+    color: #fff !important;
+}
+    
+
 
 
 /* Conteúdo principal */
 
 .conteudo_principal {
-    display: block;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    position: relative;
     margin: auto;
-    width: 60%;
+    width: 75%;
     padding: 2rem;
-    background: #fff;
+    background: rgb(248, 248, 248);
     border-radius: 12px;
     margin-bottom: 12px;
-    -webkit-box-shadow: -2px 3px 21px 2px rgba(0,0,0,0.75);
-    -moz-box-shadow: -2px 3px 21px 2px rgba(0,0,0,0.75);
-    box-shadow: -2px 3px 21px 2px rgba(0,0,0,0.75);
-}
-
-/* Título do Conteúdo principal */
-
-.conteudo_principal > h1 {
-    text-align: center;
+    border: #ecc87f solid 3px;
 }
 
 /*Caixa do Conteúdo principal*/
 
 .conteudo {
-    display: grid;
-    /* Auto ajustar em coluna ou linha */
-    grid-template-columns: repeat(auto-fill, minmax(100px, 250px));
-    grid-gap: 2rem;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
 }
+
+.conteudo:first-child {
+    padding-right: 3rem;
+    border-right: 3px solid #F0CD89;
+}
+
+.conteudo:not(:first-child) {
+    padding-left: 3rem;
+}
+
+.conteudo_principal > #icon {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: -10px;
+    top: -10px;
+}
+
+.conteudo_principal > #icon > img {
+    width: 40px;
+    transform: rotate(-20deg);
+}
+
+/*Titulo do texto*/
+    #titulo {
+        font-size: 25px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: #ecc87f;
+    }
+ 
 
 /* Texto */
 
 .conteudo p {
-    font-size: 24px;
+    font-size: 22px;
     text-align: justify;
+    margin-right: 1rem;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+/* Configuração da parte do dicionário */
+
+.dicionario_secao > span {
+    font-size: 22px;
+    text-align: justify;
+    margin-right: 1rem;
+    margin: 0;
+}
+
+.dicionario_secao {
+    margin-top: 1rem;
+}
+
+.conteudo img {
+    width: 43%;
+    margin: auto;
+    padding-bottom: 10px;
 }
 
 
 /* Footer */
 
 footer {
-    margin-top: 5%;
-    padding: 20px;
-    background-color: #F0CD89;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+    background-color: #333333;
+    margin-top: 5rem;
 }
+
+
+.img-footer {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin: 1rem;
+}
+
+footer > h1 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 20px;
+    color: #fff;
+    text-shadow: #000 2px 2px 0px;
+    font-size: 150%;
+}
+
+footer > span {
+    display: flex;
+    position: relative;
+    top: 6rem;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.sub-footer {
+    position: relative;
+    display: flex;
+    background-color: #0d0d0d;
+    height: fit-content;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.sub-footer a {
+    color: #fff;
+    text-align: center;
+}
+
+.separador {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    margin-left: 10px;
+}
+
+
+.texto-footer {
+    font-size: 18px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #fff;
+    text-shadow: #000 1px 2px 0px;
+}
+
+.imagens-footer img {
+    width: 40%;
+    transition: all 250ms ease-in-out;
+    padding-left: 25%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.imagens-footer img:hover {
+    transform: scale(1.05);
+}
+
+/* Mitologia tópicos */
+
+.texto-in {
+    margin: 5% auto 0 auto;
+    background: rgb(233, 233, 233);
+    box-shadow: 5px 5px 9px 5px rgba(0,0,0,0.21);
+    padding: 1rem;
+    width: 80%;
+    margin-bottom: 10rem;
+}
+
+.texto-conteudo p {
+    text-align: justify;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px 20px 0px 20px;
+}
+
+.texto-in h1 {
+    padding: 0px 20px 0px 20px
+}
+
+
+.texto-in hr {
+    width: 96%;
+
+}
+
+.texto-conteudo img {
+    position: relative;
+    float: left;
+    width: 35%;
+    padding: 0px 20px 0px 20px;
+}
+
+.texto-conteudo span {
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'fontetitulo', sans-serif;
+}
+
+.blockquote-footer {
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+    font-size: .875em;
+    color: #6c757d;
+}
+
+mark {
+    display: table;
+    background: #ffd !important;
+    text-align: center;
+    margin: auto;
+    margin-top: 8rem;
+    font-size: 20px;
+    padding: 2px;
+}
+
+figcaption {
+    text-align: center;
+}
+
+blockquote {
+    margin: 0 0 20px 0;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    font-style: italic;
+    color: rgb(75, 75, 75);
+}
+
+.blockquote-footer::before {
+    content: "— ";
+}
+
+.blockquote-footer a {
+    text-decoration: underline;
+    color: #4890B8;
+}
+
+/* Customização da parte da palavra no dicionário */
+
+.dicionario_palavra {
+    color: #ecc87f;
+    font-weight: bold;
+}
+
+
+/* Saiba-mais */
+
+
+.material-titulo {
+    text-align: center;
+    margin-top: 50px;
+    line-height: 3rem;
+}
+
+.produtos {
+    width: 90%;
+    height: 100%;
+    box-shadow: 5px 3px 10px 0px rgba(0,0,0,0.47);
+    margin: 5rem auto;
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+}
+
+#img-produtos {
+    display: flex;
+    width: 35%;
+    margin: auto;
+    gap: 1rem;
+    flex-direction: column;
+    padding: 10px;
+}
+
+
+#img-produtos img {
+    display: table;
+    width: 80%;
+    margin: auto;
+    box-shadow: 5px 3px 10px 0px rgba(0,0,0,0.47);
+    
+}
+
+#img-produtos span, #img-produtos a {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+    text-align: center;
+}
+
+.preço {
+    border: solid 2px  #1967d2;;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 0.200rem;
+    background-color: rgba(0, 119, 255, 0.1);
+    transition: all 200ms ease-in-out;
+}
+
+.preço:hover {
+    background-color: #1967d2;;
+    color: #fff;
+    cursor: pointer;
+
+}
+
+#img-produtos a {
+    color:#1967d2;
+}
+
+
 
 
 /* 
@@ -462,6 +737,10 @@ footer {
     div.slider {
         margin-top: 5%;
     }
+
+    .material-titulo {
+        font-size: 3vw
+    }
 }
 
 /* Deixar o site acessível para todas as dimensões, exemplo: Celular, Tablet, etc...*/
@@ -474,6 +753,7 @@ footer {
     #navbar-botao {
         display: block;
         margin-left: auto;
+        fill:#997029;
     }
 
     .navbar-itens {
@@ -520,7 +800,7 @@ footer {
     }
 }
 
-/* Conteúdo principal */
+/* Conteúdo principal / botão responsivo */
 
 @media only screen and (max-width: 460px) {
     .conteudo_principal > h1 {
@@ -529,13 +809,120 @@ footer {
     .conteudo img {
         width: 100%;
     }
-}
 
+    .card button {
+        border-radius: 0.5em;
+        width: 50%;
+    }
+
+     .texto-in h1 {
+        position: relative;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        font-size: 7vw
+     }
+
+     .texto-conteudo p {
+        font-size: 4vw;
+     }
+
+     mark {
+        font-size: 2vh;
+     }
 
 /* Deixando o dropdown responsível */
 
-@media only screen and (max-width: 460px) {  
     .dropdown-menu, .submenu-menu {
         width: 200px;
+    }
+}
+
+@media only screen and (max-width: 820px) {
+    .conteudo_principal {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .conteudo {
+        padding-left: 0!important;
+        padding-right: 0!important;
+        border-right: none!important;
+    }
+    .conteudo h1 {
+        font-size: 100%;
+    }
+    .conteudo p {
+        font-size: 100%;
+    }
+    .conteudo:first-child {
+        padding-bottom: 24px;
+        border-bottom: 3px solid #000;
+    }
+    .conteudo:nth-child(2) {    
+        margin-top: 24px;
+    }
+    .separador {
+        flex-direction: column;
+    }
+    .separador div:first-child {
+        padding-bottom: 1rem;
+    }
+
+    .separador {
+        margin: 0 !important;
+        padding: 30px 10px 0px 10px;
+    }
+
+    .separador div:last-child {
+        border-left: none;
+        border-top: 3px solid rgb(255, 255, 255);
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    .imagens-footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0;
+        width: 100%;
+    }
+
+    .imagens-footer img {
+        display: table;
+        padding: 0 !important;
+        margin: auto;
+    }
+
+
+    .texto-conteudo img {
+        float: none;
+        width: 100%;
+        padding: 0;
+    }
+
+    .produtos {
+        flex-direction: column;
+        padding: 0;
+    }
+        
+
+}
+
+/* Deixar responsivo as imagens das curiosidades */
+
+@media only screen and (max-width: 1280px) {
+    .conteudo p {
+        flex-direction: column;
+    }
+}
+
+/* Deixar o dropdown responsivo para Galaxy Fold */
+
+@media only screen and (max-width: 300px) {
+    .submenu-menu {
+        left: 35%;
+        top: 100%;
+        transform: translateY(0.1rem);
     }
 }

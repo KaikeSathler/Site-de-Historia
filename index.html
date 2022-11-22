@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="main.css">
-    <link rel="shortcut icon" href="./img/icon/coliseu.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/icon/#" type="image/x-icon">
     <title>Romania - A História Sobre o Velho Mundo</title>
 </head>
 
@@ -18,8 +18,7 @@
                 <img src="./img/icon/icone.png">
             </div>
             <!-- Esse código é para importar uma imagem para o HTML, é extenso mas só tem uma objetividade -->
-            <svg id="navbar-botao" fill="#997029" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" width="48px"
-                height="48px">
+            <svg id="navbar-botao" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" width="48px" height="48px">
                 <path
                     d="M56 48c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 48 54.798 48 56 48zM56 32c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 32 54.798 32 56 32zM56 16c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 16 54.798 16 56 16z" />
             </svg>
@@ -31,27 +30,26 @@
                         </a>
                     </li>
                     <li class="nav-link">
-                        <a href="#!">
-                            Material de apoio
+                        <a href="material.html">
+                            Aprenda mais
                         </a>
                     </li>
                 </ul>
                 <ul class="navbar-itens">
                     <li class="nav-link nav-link-topicos">
                         <ul class="dropdown">
-                            <a href="#!">Tópicos</a>
+                            <a>Tópicos</a>
                             <ul class="dropdown-menu">
-                                <li><a href="#!">Item dentro do dropdown</a></li>
-                                <li><a href="#!">Item dentro do dropdown</a></li>
-                                <li><a href="#!">Item dentro do dropdown</a></li>
                                 <li class="submenu">
-                                    <a href="#!">Submenu</a>
+                                    <a>Origens de Roma</a>
                                     <ul class="submenu-menu">
-                                        <li><a href="#!">Item dentro do dropdown</a></li>
-                                        <li><a href="#!">Item dentro do dropdown</a></li>
-                                        <li><a href="#!">Item dentro do dropdown</a></li>
+                                        <li><a href="./topicos/mitologica.html">Origem mitológica</a></li>
+                                        <li><a href="./topicos/historica.html">Origem histórica</a></li>
                                     </ul>
                                 </li>
+                                <li><a href="./topicos/monarca.html">Monarquia Romana</a></li>
+                                <li><a href="./topicos/republica.html">Republica Romana</a></li>
+                                <li><a href="./topicos/imperio.html">Império Romano</a></li>
                             </ul>
                         </ul>
                     </li>
@@ -63,19 +61,19 @@
         <div class="slider">
             <div class="slider-container">
                 <div class="slide">
-                    <img src="./img/thumb-1920-458510.jpg" alt="#">
+                    <img src="./img//colisseu.jpg" alt="#">
                 </div>
                 <div class="slide">
-                    <img src="./img/thumb-1920-458510.jpg" alt="#">
+                    <img src="./img/arcos-roma.jpg" alt="#">
                 </div>
                 <div class="slide">
-                    <img src="./img/thumb-1920-458510.jpg " alt="#">
+                    <img src="./img/Forum.jpg" alt="#">
                 </div>
                 <div class="slide">
-                    <img src="./img/thumb-1920-458510.jpg" alt="#">
+                    <img src="./img/panteão.jpg" alt="#">
                 </div>
                 <div class="slide">
-                    <img src="./img/thumb-1920-458510.jpg " alt="#">
+                    <img src="./img/colisseu.jpg" alt="#">
                 </div>
             </div>
         </div>
@@ -84,58 +82,111 @@
 
         <cards class="cards">
             <card class="card">
-                <img src="./img/card1.jpeg" alt="">
+                <img src="./img/card1.jpg" alt="">
                 <ul>
-                    <li id="subtitulo">O que você vai ver em Mitologia Romana?</li>
-                    <li><span id="flecha1">■</span></li>
-                    <li><span id="flecha1">■</span></li>
-                    <li><span id="flecha1">■</span></li>
+                    <li id="subtitulo">O que você vai ver em Origem Romana?</li>
+                    <li><span id="flecha1">■ Origem mitológica de roma</span></li>
+                    <li><span id="flecha1">■ Origem históricas de roma</span></li>
+                    <li><span id="flecha1">■ Fundação de roma</span></li>
                 </ul>
-                <button>Saiba mais</button>
+                <button><a href="./topicos/mitologica.html">Saiba mais</a></button>
             </card>
             <card class="card">
                 <img src="./img/card2.jpeg" alt="">
                 <ul>
                     <li id="subtitulo">O que você vai ver em Monarquia Romana?</li>
-                    <li><span id="flecha2">■</span></li>
-                    <li><span id="flecha2">■</span></li>
-                    <li><span id="flecha2">■</span></li>
+                    <li><span id="flecha2">■ Reis de roma</span></li>
+                    <li><span id="flecha2">■ Papel militar e religioso</span></li>
+                    <li><span id="flecha2">■ Implantação do Senado</span></li>
                 </ul>
-                <button>Saiba mais</button>
+                <button><a href="./topicos/monarca.html">Saiba mais</a></button>
             </card>
             <card class="card">
                 <img src="./img/card3.jpeg" alt="">
                 <ul>
                     <li id="subtitulo">O que você vai ver em Império Romano?</li>
-                    <li><span id="flecha3">■</span></li>
-                    <li><span id="flecha3">■</span></li>
-                    <li><span id="flecha3">■</span></li>
+                    <li><span id="flecha3">■ Escravização dos povos conquistados</span></li>
+                    <li><span id="flecha3">■ Extensão territorial</span></li>
+                    <li><span id="flecha3">■ Invasões Germânicas</span></li>
                 </ul>
-                <button>Saiba mais</button>
+                <button><a href="./topicos/imperio.html">Saiba mais</a></button>
             </card>
         </cards>
 
         <!-- Conteúdo principal -->
 
         <div class="conteudo_principal">
-            <h1>Objetividade do site</h1>
             <div class="conteudo">
+                <h1>Dicionário</h1>
+                <h2>Glossário</h2>
+                <div class="dicionario_secao">
+                    <span class="dicionario_palavra">Monoteísta: </span><span>Aquele que segue apenas uma religião e
+                        creem em uma única divindade.</span>
+                </div>
+                <div class="dicionario_secao">
+                    <span class="dicionario_palavra">Politeísta: </span><span>Aquele que segue mais de uma religião e
+                        creem em mais de uma divindade.</span>
+                </div>
+            </div>
+            <div class="conteudo">
+                <h1>Curiosidades</h1>
+                <h2>Arquitetura Romana</h2>
+                <span id="titulo">■ Centenas de milhares de pessoas morreram entre as paredes do Coliseu</span>
                 <p>
-                    Esse site tem como objetivo compartilhar aprendizados de história e curiosidades sobre a história da
-                    Roma Antiga.
+                    <span>Construído para sediar as famosas lutas de gladiadores romanos e entreter a população, o
+                        Coliseu foi o placo de cerca de 500.000 mortes. Estima-se, ainda, que mais de 1 milhão de
+                        animais morreram
+                        dentro da gigante arena.</span>
+                    <img src="./img/Colisseu2.jpg">
                 </p>
-                <img src="./img/romanos.jpg" width="256px">
+                <span id="titulo">■ A importância cultural dos Aquedutos</span>
+                <p>
+                    Os Aquedutos Romanos são construções enormes que transportavam água, permitindo que as pessoas se
+                    distanciassem da agricultura. Roma foi abastecida por 11 aquedutos ao final do terceiro século, com
+                    quase 800 km de cursos de água.
+                </p>
+                <br>
+                <p> Com a ajuda dessas estruturas, as cidades não dependiam mais da agricultura de subsistência. Assim,
+                    o povo poderia concentrar esforços em arte, política, engenharia, artesanato e indústrias
+                    especializadas. Os Aquedutos, que usavam a gravidade para movimentar a água, foram feitos
+                    surpreendentes que permitiram o desenvolvimento do Antigo Império Romano.
+                    <img src="./img/Pont_du_Gard_Oct_2007.jpg">
+                </p>
+            </div>
+            <div id="icon">
+                <img src="./img/dicionario.png">
             </div>
         </div>
         <footer>
-            <span>Olá Mundo</span>
+            <h1>Romania</h1>
+            <div class="separador">
+                <div>
+                    <span class="texto-footer">Este Site tem como objetivo compatilhar conhecimento sobre a Roma Antiga
+                        Cujo a principal criação do site foi intenção de um trabalho acadêmico da disciplina Projeto
+                        Integrador
+                        no IFPR, Instituto Federal do Paraná Campus Assis Chateaubriand, turma: IIW2022A
+                        <br><br>
+                        Discentes: Kaike, Gabrielly e Izabelly
+                        <br><br>
+                        Docente orientando: Amílcar Machado Profeta Filho
+                        <br><br>
+                        Coordenador da disciplina : Alexandre Rodrigues Monge
+                        <br><br>
+                        Coordenador de Curso: Humberto Fioravante Ferro
+                    </span>
+                </div>
+                <div class="imagens-footer">
+                    <a href="https://assis.ifpr.edu.br/" target="blank">
+                        <img src="./img/ifpr-logo.png">
+                    </a>
+                </div>
+            </div>
         </footer>
-
+        <div class="sub-footer">
+            <a>&copy; 2022 Copyright vercel.com</a>
+        </div>
     </main>
-
     <script src="./index.js"></script>
-
-
 </body>
 
 </html>
